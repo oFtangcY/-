@@ -1,0 +1,14 @@
+\contentsline {section}{\numberline {一}实验原理}{2}{section.1}%
+\contentsline {section}{\numberline {二}仪器用具}{2}{section.2}%
+\contentsline {section}{\numberline {三}原始数据}{2}{section.3}%
+\contentsline {section}{\numberline {四}数据处理}{3}{section.4}%
+\contentsline {subsection}{\numberline {(一)}最小二乘法计算结果}{3}{subsection.4.1}%
+\contentsline {subsection}{\numberline {(二)}最小二乘法误差分析}{4}{subsection.4.2}%
+\contentsline {subsection}{\numberline {(三)}逐差法计算结果}{4}{subsection.4.3}%
+\contentsline {subsection}{\numberline {(四)}逐差法误差分析}{4}{subsection.4.4}%
+\contentsline {section}{\numberline {五}结论分析}{5}{section.5}%
+\contentsline {subsection}{\numberline {(一)}方案对比}{5}{subsection.5.1}%
+\contentsline {subsection}{\numberline {(二)}误差主要来源}{5}{subsection.5.2}%
+\contentsline {subsection}{\numberline {(三)}系统误差}{5}{subsection.5.3}%
+\contentsline {section}{\numberline {A}原始实验记录}{6}{appendix.A}%
+\contentsline {section}{\numberline {B}金属梁整体倾斜引发的测量误差分析}{6}{appendix.B}%
