@@ -1,0 +1,14 @@
+\contentsline {section}{\numberline {一}测定玻璃三棱镜顶角}{2}{section.1}%
+\contentsline {section}{\numberline {二}掠入射法测定三棱镜折射率}{2}{section.2}%
+\contentsline {section}{\numberline {三}最小偏向角法测定三棱镜折射率}{3}{section.3}%
+\contentsline {subsection}{\numberline {(一)}数据计算}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {(二)}分析与小结}{4}{subsection.3.2}%
+\contentsline {section}{\numberline {四}测定玻璃材料的色散曲线}{4}{section.4}%
+\contentsline {subsection}{\numberline {(一)}原始数据}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {(二)}玻璃色散曲线拟合}{4}{subsection.4.2}%
+\contentsline {section}{\numberline {五}测量光栅常数}{5}{section.5}%
+\contentsline {section}{\numberline {六}测量汞灯双黄线波长及光栅角色散率}{6}{section.6}%
+\contentsline {subsection}{\numberline {(一)}原始数据}{6}{subsection.6.1}%
+\contentsline {subsection}{\numberline {(二)}汞灯双黄线波长}{6}{subsection.6.2}%
+\contentsline {subsection}{\numberline {(三)}光栅角色散率}{6}{subsection.6.3}%
+\contentsline {section}{\numberline {七}测量光栅分辨率}{7}{section.7}%

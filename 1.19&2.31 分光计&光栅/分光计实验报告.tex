@@ -1,0 +1,291 @@
+\documentclass[12pt, a4paper]{ctexart}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\headwidth}{\textwidth}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\thepage}
+\fancyfoot{}
+
+\fancypagestyle{plain}{
+\fancyhead{}
+\renewcommand{\headrulewidth}{1pt}
+\fancyfoot{}
+\fancyhead[L]{北京大学基础物理实验报告}
+\fancyhead[R]{唐晨宇}
+}
+
+\usepackage[colorlinks,linkcolor=red,urlcolor = blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{mathcomp}
+\usepackage{mathabx}
+\usepackage{enumitem}
+\usepackage[left = 1in, right = 1in, top = 1.2in, bottom = 1.2in]{geometry}
+\usepackage{multirow}
+
+\ctexset{
+    section={   
+        name={,},
+        number={\chinese{section}},
+        format=\heiti\raggedright
+    },
+    subsection={   
+        name={(,)},
+        number={\chinese{subsection}},
+        format=\heiti
+    }
+}
+
+\begin{document}
+\title{分光计的调节、棱镜折射率的测量$\&$光栅特性及测定光波波长}
+\author{唐晨宇 \quad 2300934207}
+\date{2024年4月}
+
+\maketitle
+
+\tableofcontents
+\footnotetext{一至四节为4月3日测量数据，五至七节为4月7日测量数据}
+
+\clearpage
+
+\section*{实验仪器}
+JJY1 型分光计（最小分度$1'$）、钠灯、汞灯
+
+\section{测定玻璃三棱镜顶角}
+
+\begin{table}[htbp]
+  \centering
+  \caption{玻璃三棱镜顶角测量数据}
+    \begin{tabular}{cccccc}
+    \toprule
+    $i$ & $\theta'_1$ & $\theta''_1$ & $\theta'_2$ & $\theta''_2$ &$\psi$ \\
+    \midrule
+    1     & $41^{\circ}55'$ & $221^{\circ}59'$ & $161^{\circ}58'$ & $341^{\circ}59'$ & $120^{\circ}1'30''$ \\
+    2     & $41^{\circ}56'$ & $222^{\circ}0'$  & $161^{\circ}58'$ & $342^{\circ}0'$  & $120^{\circ}1'$     \\
+    3     & $36^{\circ}29'$ & $216^{\circ}31'$ & $156^{\circ}30'$ & $336^{\circ}31'$ & $120^{\circ}0'30''$ \\
+    \bottomrule
+    \end{tabular}
+  \label{tab:t1}
+\end{table}
+其中$\psi = \frac12 [(\theta'_2 - \theta'_1) + (\theta''_2 - \theta''_1)]$
+
+算得
+\[ \bar{\psi} = 120^{\circ}1' \Rightarrow A = 180^{\circ} - \bar{\psi} =  59^{\circ}59' \]
+由数据可得$\sigma_{AA} = \sqrt{\frac{\sum(\psi_i - \bar{\psi})^2}{n(n-1)}} = 18''$，系统极限误差取分光计仪表盘最小分度$1'$
+\footnote{由于本实验数据均为分光计仪表盘读数，故后续数据系统极限误差均取$e = 1'$，不再重复说明}
+\[ \sigma_A = \sqrt{\sigma_{AA}^2 + \frac{e^2}{3}} = 39'' \]
+最终结果为$ A \pm \sigma_A = 59^{\circ}59' \pm 1' $，保留四位有效数字，即精确到1角分量级。
+随机误差和系统误差大致在同一数量级，可见测量精确度较高。
+
+\section{掠入射法测定三棱镜折射率}
+
+\begin{table}[htbp]
+  \centering
+  \caption{掠入射法测量数据}
+    \begin{tabular}{cccccc}
+    \toprule
+    $i$ & $\theta'_3$ & $\theta''_3(+ 360^{\circ})$ & $\theta'_4$ & $\theta''_4$ &$\phi$ \\
+    \midrule
+    1     & $216^{\circ}30'$ & $36^{\circ}28'$ & $175^{\circ}3'$  & $355^{\circ}4'$  & $41^{\circ}25'30''$ \\
+    2     & $219^{\circ}57'$ & $39^{\circ}51'$ & $178^{\circ}30'$ & $358^{\circ}31'$ & $41^{\circ}23'30''$ \\
+    3     & $208^{\circ}7'$  & $28^{\circ}8'$  & $166^{\circ}41'$ & $346^{\circ}47'$ & $41^{\circ}23'30''$ \\
+    \bottomrule
+    \end{tabular}
+  \label{tab:t2}
+\end{table}
+其中$\phi = \frac12 [(\theta'_3 - \theta'_4) + (\theta''_3 - \theta''_4)]$，实验光源为钠黄光。
+
+算得
+\begin{gather*}
+    \bar{\phi} = 41^{\circ}24'10'' \\
+    \sigma_{\phi A} = 40'' \Rightarrow \sigma_{\phi} = \sqrt{\sigma_{\phi A}^2 + \frac{e^2}{3}} = 53''
+\end{gather*}
+代入公式
+\begin{gather*}
+  n = \sqrt{1 + (\frac{\cos A + \sin \phi}{\sin A})^2} = 1.6732\\
+  \sigma_n = \frac{\cos A + \sin \phi}{n \sin^3 A} \sqrt{(1 + \sin \phi \cos A)^2 \sigma_A^2 + \sin^2 A \cos^2 \phi \sigma_{\phi}^2} = 0.0004
+\end{gather*}
+最终结果为$n \pm \sigma_n = 1.6732 \pm 0.0004$，随机误差与系统误差大致在同一数量级。
+
+\section{最小偏向角法测定三棱镜折射率}
+\subsection{数据计算}
+
+\begin{table}[htbp]
+  \centering
+  \caption{最小偏向角法测量数据}
+    \begin{tabular}{cccccc}
+    \toprule
+    i     & $\theta'_5$ & $\theta''_5$ & $\theta'_6$ & $\theta''_6$ & $\delta_m$ \\
+    \midrule
+    1     & $290^{\circ}23'$ & $110^{\circ}15'$ & $344^{\circ}26'$ & $164^{\circ}23'$ & $54^{\circ}5'30''$ \\
+    2     & $290^{\circ}23'$ & $110^{\circ}16'$ & $344^{\circ}26'$ & $164^{\circ}23'$ & $54^{\circ}5'$     \\
+    3     & $208^{\circ}7'$  & $110^{\circ}19'$ & $344^{\circ}28'$ & $164^{\circ}25'$ & $54^{\circ}4'$     \\
+    \bottomrule
+    \end{tabular}
+  \label{tab:t3}
+\end{table}
+其中$\delta_m = \frac12 [(\theta'_6 - \theta'_5) + (\theta''_6 - \theta''_5)]$，实验光源为汞灯绿线。
+
+算得
+\begin{gather*}
+    \bar{\delta}_m = 54^{\circ}4'50'' \\
+    \sigma_{\delta_m A} = 27'' \Rightarrow \sigma_{\delta_m} = \sqrt{\sigma_{\delta_m A}^2 + \frac{e^2}{3}} = 44''
+\end{gather*}
+代入公式
+\begin{gather*}
+  n = \frac{\sin \frac{\delta_m + A}{2}}{\sin \frac{A}{2}} = 1.67837\\
+  \sigma_n = \sqrt{(\frac{\sin \frac{\delta_m}{2}}{2\sin^2 \frac{A}{2}}\sigma_A)^2 + (\frac{\cos \frac{\delta_m + A}{2}}{2\sin \frac{A}{2}}\sigma_{\delta_m})^2} = 0.00021
+\end{gather*}
+最终结果为$n \pm \sigma_n = 1.67837 \pm 0.00021$
+
+\subsection{分析与小结}
+
+虽然本部分折射率计算结果与掠入射法相比具有较小的相对不确定度，但从实验操作的角度来说，我个人倾向于认为本部分结果与真值相比更有可能会出现较大偏差。
+这是因为在寻找最小偏向角的过程，移动游标盘时由于人眼分辨能力有限，对于何处是真正的最小偏向角的判断可能会存在较大误差。
+在人眼的分辨能力下会出现游标盘转动了$1' \sim 2'$但在视野中谱线几乎没有移动的情况，由于是来回移动寻找极值点，无法预先用$PP'$叉丝辅助判断极值点位置，在这里可能引入较大误差。
+而掠入射法中明暗分界线是单向移动，可以用叉丝来较好地定位，不存在上述误差。
+
+\section{测定玻璃材料的色散曲线}
+\subsection{原始数据}
+
+\begin{table}[htbp]
+  \centering
+  \caption{测量不同波长对应玻璃三棱镜的折射率数据}
+    \begin{tabular}{c|c|c|c|c|c}
+    \toprule
+    \multicolumn{1}{c}{谱线} & \multicolumn{1}{c}{$\theta'_5$} & \multicolumn{1}{c}{$\theta''_5$} & \multicolumn{1}{c}{$\theta'_6$} & \multicolumn{1}{c}{$\theta''_6$} & \multicolumn{1}{c}{$n(\lambda)$} \\
+    \midrule
+    绿 $\lambda_g = 546.074nm$ & \multicolumn{4}{|c|}{——} & 1.67837 \\
+    \hline
+    黄1 $\lambda_{y1} = 576.960nm$ & $290^{\circ}49'$ & $110^{\circ}42'$ & \multirow{3}{*}{$344^{\circ}27'$} & \multirow{3}{*}{$164^{\circ}26'$} & 1.67458 \\
+    \cline{1-3}\cline{6-6}
+    黄2 $\lambda_{y2} = 579.066nm$ & $290^{\circ}50'$ & $110^{\circ}44'$ &       &       & 1.67435 \\
+    \cline{1-3}\cline{6-6}
+    紫 $\lambda_p = 435.833nm$ & $288^{\circ}1'$ & $107^{\circ}55'$ &       &       & 1.70075 \\
+    \bottomrule
+    \end{tabular}
+  \label{tab:t4}
+\end{table}
+表中数据为不同波长光的最小偏向角法测量数据和计算结果，光源为汞灯\footnotemark
+\footnotetext{由于本次实验中能观测到的汞灯的清晰谱线仅有表中4条，对于非线性拟合存在较大误差}。
+
+\subsection{玻璃色散曲线拟合}
+利用柯西色散公式，取一级近似
+\[ n = A + \frac{B}{\lambda^2} \]
+拟合得
+\begin{gather*}
+  A = 1.63968 \quad B = 1.159\times 10^{4} nm^2 \quad r = 0.999946\\
+  \frac{\sigma_B}{B} = \sqrt{\frac{1/r^2 - 1}{n - 2}} \Rightarrow \sigma_B = 0.009\times 10^{4} nm^2
+\end{gather*}
+取二级近似
+\[ n = A + \frac{B}{\lambda^2} + \frac{C}{\lambda^4} \]
+拟合得
+\begin{gather*}
+  A = 1.64589 \quad B = 0.8394 \times 10^{4} nm^2 \quad C = 3.8488 \times 10^{8} nm^4
+\end{gather*}
+可见柯西色散公式中的二级项对拟合结果仍存在较大影响，不可忽略。
+
+\section{测量光栅常数}
+
+\begin{table}[htbp]
+  \centering
+  \caption{光栅衍射图样数据一}
+    \begin{tabular}{ccccccc}
+    \toprule
+    级次$k$   & $\theta_1$ & $\theta'_1$ & $\theta_2$ & $\theta'_2$ & $\theta_3$ & $\theta'_3$ \\
+    \midrule
+    +2    & $82^{\circ}52'$ & $262^{\circ}52'$ & —     & —     & —     & — \\
+    +1    & $61^{\circ}2'$  & $241^{\circ}7'$  & $61^{\circ}0'$  & $241^{\circ}5'$  & $61^{\circ}0'$  & $241^{\circ}6'$  \\
+    0     & $41^{\circ}58'$ & $222^{\circ}2'$  & $41^{\circ}56'$ & $221^{\circ}59'$ & $41^{\circ}56'$ & $221^{\circ}59'$ \\
+    -1    & $22^{\circ}53'$ & $202^{\circ}55'$ & $22^{\circ}51'$ & $202^{\circ}52'$ & $22^{\circ}50'$ & $202^{\circ}51'$ \\
+    -2    & $1^{\circ}9'$   & $181^{\circ}10'$ & —     & —     & —     & — \\
+    \midrule
+    $\phi_1$ & \multicolumn{2}{c}{$19^{\circ}5'15''$} & \multicolumn{2}{c}{$19^{\circ}5'30''$} & \multicolumn{2}{c}{$19^{\circ}6'15''$} \\
+    \bottomrule
+    \end{tabular}
+  \label{tab:t5}
+\end{table}
+其中$\phi_1 = \frac{1}{2} [(\theta_{+1} - \theta_{-1}) + (\theta'_{+1} - \theta'_{-1})]$，测量谱线为汞灯绿线，$\lambda = 546.074nm$
+
+由一级谱线数据得
+\[ \bar{\phi}_1 = 19^{\circ}5'40'' \quad \sigma_{\phi_1 A} = 18'' \]
+由光栅公式
+\begin{gather*}
+  d \sin \phi = k \lambda \quad \Rightarrow \quad d = \frac{\lambda}{\sin \bar{\phi}_1} = 1.6693 \mu m\\
+  \sigma_d = \frac{\partial d}{\partial \phi} \sigma_{\phi} = \frac{\lambda}{\sin \bar{\phi}_1 \tan \bar{\phi}_1} \sqrt{\sigma_{\phi_1 A}^2 + \frac{e^2}{3}} = 0.0010 \mu m
+\end{gather*}
+即最终结果为$d \pm \sigma_d = (1.6693 \pm 0.0010) \mu m$\\
+换算为空间频率为$f \pm \sigma_f = (599.05 \pm 0.36) \text{线}/mm$\footnote{标准值为$600\text{线}/mm$}，两类不确定度基本在同一量级。\\
+
+由二级谱线数据得
+\[ \bar{\phi}_2 = 40^{\circ}51'15'' \quad \Rightarrow \quad d' = \frac{2\lambda}{\sin \bar{\phi}_2} = 1.6696 \mu m \]
+在误差范围内。
+
+\section{测量汞灯双黄线波长及光栅角色散率}
+\subsection{原始数据}
+
+\begin{table}[htbp]
+  \centering
+  \caption{光栅衍射图样数据二}
+    \begin{tabular}{ccccccc}
+    \toprule
+    级次$k$   & $\theta_1$ & $\theta'_1$ & $\theta_2$ & $\theta'_2$ & $\theta_3$ & $\theta'_3$ \\
+    \midrule
+    (黄2) +1 & $62^{\circ}12'$ & $242^{\circ}17'$ & $62^{\circ}13'$ & $242^{\circ}18'$ & $62^{\circ}13'$ & $242^{\circ}18'$ \\
+    (黄1) +1 & $62^{\circ}8'$ & $242^{\circ}14'$ & $62^{\circ}9'$ & $242^{\circ}14'$ & $62^{\circ}8'$ & $242^{\circ}13'$ \\
+    0     & $41^{\circ}56'$ & $221^{\circ}59'$ & —     & —     & —     & — \\
+    (黄1) -1 & $21^{\circ}43'$ & $201^{\circ}45'$ & $21^{\circ}43'$ & $201^{\circ}44'$ & $21^{\circ}43'$ & $201^{\circ}43'$ \\
+    (黄2) -1 & $21^{\circ}38'$ & $201^{\circ}40'$ & $21^{\circ}38'$ & $201^{\circ}39'$ & $21^{\circ}37'$ & $201^{\circ}39'$ \\
+    \midrule
+    $\bar{\theta}_{黄1}$ & \multicolumn{2}{c}{$20^{\circ}13'30''$} & \multicolumn{2}{c}{$20^{\circ}14'$} & \multicolumn{2}{c}{$20^{\circ}13'45''$} \\
+    $\bar{\theta}_{黄2}$ & \multicolumn{2}{c}{$20^{\circ}18'15''$} & \multicolumn{2}{c}{$20^{\circ}18'30''$} & \multicolumn{2}{c}{$20^{\circ}18'45''$} \\
+    \bottomrule
+    \end{tabular}
+  \label{tab:t6}
+\end{table}
+其中$\bar{\theta} = \frac{1}{2} [(\theta_{+1} - \theta_{-1}) + (\theta'_{+1} - \theta'_{-1})]$
+
+\subsection{汞灯双黄线波长}
+
+算得
+\begin{gather*}
+  \bar{\theta}_1 = 20^{\circ}13'45'' \quad \sigma_{\bar{\theta}_1 A} = 9''\\
+  \bar{\theta}_2 = 20^{\circ}18'30'' \quad \sigma_{\bar{\theta}_2 A} = 9''
+\end{gather*}
+由光栅公式
+\begin{gather*}
+  \lambda_1 = d \sin \bar\theta_1 = 577.20 nm \quad \lambda_2 = d \sin \bar{\theta}_2 = 579.37 nm \footnotemark \\
+  \sigma_{\lambda} = \sqrt{(\frac{\partial \lambda}{\partial d})^2 + (\frac{\partial \lambda}{\partial \theta})^2} = \sqrt{\sin^2 \theta \sigma_d^2 + d^2 \cos^2 \theta \sigma_{\theta}^2}\\
+  \Rightarrow \quad \sigma_{\lambda_1} = 0.07 nm \quad \sigma_{\lambda_2} = 0.07 nm 
+\end{gather*}
+\footnotetext{此处光栅常数$d$及其不确定度取第五节中结果，最终结果标准波长为$576.960 nm $和$579.066 nm $}
+故最终结果为$\lambda_1 = (577.20 \pm 0.07) nm $，$\lambda_2 = (579.37 \pm 0.07) nm $
+
+\subsection{光栅角色散率}
+
+由定义
+\[ D = \frac{\Delta \phi}{\Delta \lambda} = 131.34 ''/nm \footnotemark \]
+\footnotetext{该处波长差取本节中计算结果。若取标准值则角色散率$D = 135.33''/nm $}
+代入光栅公式，取微分得
+\[ D = \frac{k}{d \cos \bar{\theta}} = 131.72 ''/nm \]
+其中$\bar{\theta} = \frac{1}{2}(\bar{\theta}_1 + \bar{\theta}_2)$\\
+不确定度
+\[ \sigma_{D} = \sqrt{(\frac{\partial D}{\partial d})^2 + (\frac{\partial D}{\partial \theta})^2} = \sqrt{(\frac{\sigma_d}{d^2 \cos \bar{\theta}})^2 + (\frac{\sin \bar{\theta}}{d \cos^2 \bar{\theta}}\sigma_{\bar{\theta}})^2 } = 0.08''/nm \]
+
+\section{测量光栅分辨率}
+通过狭缝充当孔径光阑，来限制光栅的分辨率。不断减小狭缝宽度，对于一级衍射条纹，当钠光双线恰好无法分辨时，利用读数显微镜测得缝宽$\Delta x = x_1 - x_2 = 19.305mm - 17.769mm = 1.536mm$。
+
+计算得$R = kN = k \frac{\Delta x}{d} = 920$
+
+而由光栅色分辨本领的理论公式计算得$R = \frac{\bar \lambda}{\Delta \lambda} = \frac{589.3}{0.6} = 982\footnotemark$
+\footnotetext{钠黄光双线标准波长取$589.0nm$和$589.6nm$}
+
+由于人眼对“恰好无法分辨”的判断不同，对色分辨本领的测量计算产生较大误差。
+
+
+
+\end{document}
