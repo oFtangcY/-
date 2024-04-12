@@ -1,0 +1,20 @@
+\contentsline {section}{\numberline {一}迈克耳孙干涉仪调节步骤}{2}{section.1}%
+\contentsline {section}{\numberline {二}非定域干涉条纹的调节}{2}{section.2}%
+\contentsline {subsection}{\numberline {(一)}圆条纹和椭圆条纹的调节步骤}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {(二)}圆条纹的变化规律及解释}{3}{subsection.2.2}%
+\contentsline {section}{\numberline {三}非定域直条纹和双曲条纹的调节方法}{3}{section.3}%
+\contentsline {section}{\numberline {四}定域干涉等倾条纹的调节方法}{3}{section.4}%
+\contentsline {paragraph}{调节方法}{3}{paragraph*.6}%
+\contentsline {paragraph}{原理说明}{4}{paragraph*.7}%
+\contentsline {section}{\numberline {五}等倾条纹的变化规律及解释}{4}{section.5}%
+\contentsline {section}{\numberline {六}定域干涉等厚条纹的调节方法}{4}{section.6}%
+\contentsline {section}{\numberline {七}等厚条纹的变化规律及解释}{4}{section.7}%
+\contentsline {section}{\numberline {八}白光等厚干涉条纹的调节方法及干涉条纹的现象描述}{4}{section.8}%
+\contentsline {section}{\numberline {九}观测不同光源的相干长度}{4}{section.9}%
+\contentsline {paragraph}{白光}{4}{paragraph*.8}%
+\contentsline {paragraph}{白光经橙色玻璃滤光}{5}{paragraph*.9}%
+\contentsline {paragraph}{白光经黄干涉滤光片滤光}{5}{paragraph*.10}%
+\contentsline {paragraph}{低压汞灯黄光}{5}{paragraph*.11}%
+\contentsline {section}{\numberline {十}测定汞黄光双线的波长差}{5}{section.10}%
+\contentsline {subsection}{\numberline {(一)}测量衬比度拍频}{5}{subsection.10.1}%
+\contentsline {subsection}{\numberline {(二)}测量相邻波腹间的干涉条纹数目}{6}{subsection.10.2}%
