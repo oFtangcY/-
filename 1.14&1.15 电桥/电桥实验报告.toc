@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {一}平衡电桥}{3}{section.1}%
+\contentsline {section}{\numberline {二}非平衡电桥}{4}{section.2}%
+\contentsline {section}{\numberline {三}应变片实验}{7}{section.3}%
+\contentsline {subsection}{\numberline {(一)}quarter bridge}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {(二)}half bridge}{8}{subsection.3.2}%
+\contentsline {subsection}{\numberline {(三)}full bridge}{9}{subsection.3.3}%
+\contentsline {subsection}{\numberline {(四)}称量结果分析}{11}{subsection.3.4}%
+\contentsline {subsection}{\numberline {(五)}应变片阻值随梁受力变化}{11}{subsection.3.5}%
